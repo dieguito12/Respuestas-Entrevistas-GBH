@@ -1,0 +1,5 @@
+C:\Users\Gatorade\Documents\Diego\ISC\GBH\RespuestasEntrevista\Pregunta9\bin\Debug\Pregunta9.dll
+C:\Users\Gatorade\Documents\Diego\ISC\GBH\RespuestasEntrevista\Pregunta9\bin\Debug\Pregunta9.pdb
+C:\Users\Gatorade\Documents\Diego\ISC\GBH\RespuestasEntrevista\Pregunta9\obj\Debug\Pregunta9.csprojResolveAssemblyReference.cache
+C:\Users\Gatorade\Documents\Diego\ISC\GBH\RespuestasEntrevista\Pregunta9\obj\Debug\Pregunta9.dll
+C:\Users\Gatorade\Documents\Diego\ISC\GBH\RespuestasEntrevista\Pregunta9\obj\Debug\Pregunta9.pdb

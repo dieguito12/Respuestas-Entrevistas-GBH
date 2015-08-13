@@ -1,0 +1,260 @@
+Lenguaje de programacion escogido: C#
+
+************ Respuesta Pregunta 1 ************
+
+static int num_repetido(List<int> lista)
+{
+	List<int> aux = new List<int>();
+    aux.Add(lista[0]);
+    for(int i = 1; i<lista.Count; i++)
+    {
+       	if (aux.Contains(lista[i]))
+           		return lista[i];
+       	aux.Add(lista[i]);
+    }
+    return -1;
+}
+
+----------------------------------------------------------------------
+
+************** Respuesta Pregunta 2**************
+
+static List<int> lista_valores = new List<int>();
+
+static Dictionary<int, string> secuencia = new Dictionary<int, string>();
+
+static void sumatoria (int num, List<int> lista)
+{
+    int aux = 0;
+    for(int i = num; i>0; i--)
+    {
+        if(secuencia.ContainsKey(i))
+        {
+            lista.Add(i);
+            sumatoria(aux, lista);
+            return;
+        }
+        aux++;
+        
+    } 
+}
+
+static String determinar_receta(int num)
+{
+	String receta = "La receta es: ";
+
+    secuencia.Add(1,"cafe");
+    secuencia.Add(2,"mantequilla");
+    secuencia.Add(4,"arroz");
+    secuencia.Add(8,"habichuela");
+    secuencia.Add(16,"carne");
+    secuencia.Add(32,"jugo");
+    secuencia.Add(64,"ensalada");
+
+    if (secuencia.ContainsKey(num))
+    {
+    	receta += secuencia[num];
+    }
+    else
+    {
+        sumatoria(num, lista_valores);
+        for (int i = 0; i < lista_valores.Count; i++)
+        {
+            receta += secuencia[lista_valores[i]];
+            if (i + 1 != lista_valores.Count)
+            {
+                receta += " con ";
+            }
+        }
+    }
+
+    return receta;
+}
+
+----------------------------------------------------------------------
+
+************** Respuesta Pregunta 3**************
+
+static List<int> IntegerArray = new List<int>();
+        static LinkedList<int> SortedList = new LinkedList<int>();
+
+        static LinkedList<int> sort_list(List<int> lista, LinkedList<int> ordenada)
+        {
+            if (null == lista || lista.Count == 0)
+                return null;
+            if(null == ordenada)
+                ordenada = new LinkedList<int>();
+            if(ordenada.Count==0)
+                ordenada.AddFirst(lista[0]);
+            for (int i = 1; i < lista.Count; i++ )
+            {
+                if (lista[i] < ordenada.First.Value)
+                {
+                    ordenada.AddFirst(lista[i]);
+                }
+                else
+                {
+                    LinkedListNode<int> node = ordenada.First;
+                    while(null != node)
+                    {
+                        if(null != node.Next)
+                        {
+                            if (lista[i] > node.Value)
+                            {
+                                node = node.Next;
+                            }
+                            else
+                            {
+                                ordenada.AddBefore(node, lista[i]);
+                                break; 
+                            }
+                        }
+                        else
+                        {
+                            if (lista[i] > node.Value)
+                                ordenada.AddAfter(node, lista[i]);
+                            else
+                                ordenada.AddBefore(node, lista[i]);
+                            break; 
+                        }
+                        
+                    }
+                }
+                    
+            }
+
+            return ordenada;
+
+        }
+
+        static void load_array()
+        {
+            string linea;
+
+            System.IO.StreamReader file = new System.IO.StreamReader(@"IntegerArray.txt");
+            while ( null != (linea = file.ReadLine()))
+            {
+                IntegerArray.Add(int.Parse(linea));
+            }
+
+            file.Close();
+        }
+----------------------------------------------------------------------
+
+************** Respuesta Pregunta 4**************
+
+Que la funcion T(n) tiene el mismo orden y comportamiento iterativo que la funcion f(n). Es decir, que puede
+tener tantos pasos como sea la funcion f(n) (constante, lineal, cuadratica, cubica, exponencial, etc).
+
+----------------------------------------------------------------------
+
+************** Respuesta Pregunta 5**************
+
+No lo se.... No se si tiene alguna diferencia de lo anterior.
+
+----------------------------------------------------------------------
+
+************** Respuesta Pregunta 6**************
+
+LinkedList<int> lista = new LinkedList<int>();
+
+lista.AddFirst(37);
+lista.AddFirst(99);
+lista.AddFirst(12);
+
+System.Console.WriteLine("******** PREGUNTA 6 ********");
+
+            
+System.Console.WriteLine("Lista: ");
+LinkedListNode<int> node = lista.First;
+while (null != node)
+{
+    System.Console.WriteLine(node.Value);
+    node = node.Next;
+}
+
+----------------------------------------------------------------------
+
+************** Respuesta Pregunta 7**************
+
+static bool is_cyclic(LinkedList<int> lista)
+{
+    LinkedListNode<int> nodo = lista.First;
+    while(null != nodo)
+    {
+        if (nodo.Next == nodo)
+            return true;
+        LinkedListNode<int> aux_node = lista.First;
+        while(null != aux_node && aux_node != nodo)
+        {
+            if (nodo.Next == aux_node)
+                return true;
+            aux_node = aux_node.Next;
+        }
+        nodo = nodo.Next;
+    }
+    return false;
+}
+
+
+----------------------------------------------------------------------
+
+************** Respuesta Pregunta 8**************
+
+static bool es_palidromo(String palabra)
+{
+    List<char> palabra1 = new List<char>(palabra.ToCharArray());
+    List<char> aux = new List<char>();
+
+    for (int i = palabra1.Count - 1; i >= 0; i-- )
+    {
+        if (palabra1[i] != ' ')
+            aux.Add(palabra1[i]);
+    }
+
+    int k = 0;
+    for(int i = 0; i < palabra1.Count; i++)
+        {
+            if (palabra1[i] != ' ')
+            {
+                if (palabra1[i] != aux[k])
+                    return false;
+                k++;
+            }
+        }
+        return true;
+                
+}
+
+----------------------------------------------------------------------
+
+************** Respuesta Pregunta 9**************
+
+El patron que elegi fue el "Strategy", y el problema fue el tener la necesidad de ordenar una lista de matriculas
+(o cualquier otra lista de valores numericos enteros) en orden descendente o ascendente.
+
+Escogeria este patron para un problema de este tipo, con el fin de poder encapsular los metodos de ordenamiento
+de tal manera si hay la necesidad de agregar otra forma de ordenar, solo habria que agregar la clase
+y hacer override al metodo "ordenar()", y asignar al objeto que hace es Strategy el nuevo ordenador.
+
+----------------------------------------------------------------------
+
+************** Respuesta Pregunta 10**************
+
+Una clase es la representacion de una entidad del mundo real, abstraido a nivel computacional.
+Pertenece al mundo estatico de un programa, es decir, el codigo. Por otro lado, un objeto es la instancia
+de un momento en especifico de esa clase y pertenece al mundo dinamico de un programa (datos).
+
+ ----------------------------------------------------------------------
+
+************** Respuesta Pregunta 11**************
+
+Una aplicacion web es aquella que se ejecuta a traves de un navegador web. Sin el mismo (o sin acceso a internet)
+es imposible utilizar dicha aplicacion. Una aplicacion desktop es aquella que de instala o se ejecuta en el sistema
+operativo de una PC, sin importar o no el la conexion a internet.
+
+----------------------------------------------------------------------
+
+************** Respuesta Pregunta 12**************
+
+El diagrama ER esta en un archivo .vsd llamado 'Diagrama ER'.

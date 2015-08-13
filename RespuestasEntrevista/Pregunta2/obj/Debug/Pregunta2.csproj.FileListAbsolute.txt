@@ -1,0 +1,5 @@
+C:\Users\Gatorade\Documents\Diego\ISC\GBH\RespuestasEntrevista\Pregunta2\bin\Debug\Pregunta2.exe.config
+C:\Users\Gatorade\Documents\Diego\ISC\GBH\RespuestasEntrevista\Pregunta2\bin\Debug\Pregunta2.exe
+C:\Users\Gatorade\Documents\Diego\ISC\GBH\RespuestasEntrevista\Pregunta2\bin\Debug\Pregunta2.pdb
+C:\Users\Gatorade\Documents\Diego\ISC\GBH\RespuestasEntrevista\Pregunta2\obj\Debug\Pregunta2.exe
+C:\Users\Gatorade\Documents\Diego\ISC\GBH\RespuestasEntrevista\Pregunta2\obj\Debug\Pregunta2.pdb

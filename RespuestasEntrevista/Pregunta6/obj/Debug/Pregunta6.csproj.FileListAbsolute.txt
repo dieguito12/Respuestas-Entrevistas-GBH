@@ -1,0 +1,6 @@
+C:\Users\Gatorade\Documents\Diego\ISC\GBH\RespuestasEntrevista\Pregunta6\bin\Debug\Pregunta6.exe.config
+C:\Users\Gatorade\Documents\Diego\ISC\GBH\RespuestasEntrevista\Pregunta6\bin\Debug\Pregunta6.exe
+C:\Users\Gatorade\Documents\Diego\ISC\GBH\RespuestasEntrevista\Pregunta6\bin\Debug\Pregunta6.pdb
+C:\Users\Gatorade\Documents\Diego\ISC\GBH\RespuestasEntrevista\Pregunta6\obj\Debug\Pregunta6.csprojResolveAssemblyReference.cache
+C:\Users\Gatorade\Documents\Diego\ISC\GBH\RespuestasEntrevista\Pregunta6\obj\Debug\Pregunta6.exe
+C:\Users\Gatorade\Documents\Diego\ISC\GBH\RespuestasEntrevista\Pregunta6\obj\Debug\Pregunta6.pdb

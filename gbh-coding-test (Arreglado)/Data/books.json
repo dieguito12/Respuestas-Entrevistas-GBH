@@ -1,0 +1,46 @@
+{
+  "books": [
+    {
+      "name":"The super book - Paper version",
+      "author":"José Perez",
+      "type":1,
+      "pages":[
+        {
+          "pageNumber": 1,
+          "content": "Hello my pretty page 1 content goes here"
+        },
+        {
+          "pageNumber": 2,
+          "content": "Hello my pretty page 2 content goes here"
+        },
+        {
+          "pageNumber": 3,
+          "content": "Hello my pretty page 3 content goes here"
+        }
+      ]
+    },
+    {
+      "name":"Just Some Book - Kindle version",
+      "author":"John Doe",
+      "type":2,
+      "pages":[
+        {
+          "pageNumber": 1,
+          "content": "Hello my pretty page 1 content goes here"
+        },
+        {
+          "pageNumber": 2,
+          "content": "Hello my pretty page 2 content goes here"
+        },
+        {
+          "pageNumber": 3,
+          "content": "Hello my pretty page 3 content goes here"
+        },
+        {
+          "pageNumber": 4,
+          "content": "Hello my pretty page 4 content goes here"
+        }
+      ]
+    }
+  ]
+}
